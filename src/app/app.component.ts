@@ -7,4 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'PROJECT';
+
+
+  recipes: boolean = true;
+  shoppingList: boolean = true;
+
+  changeDisplay(event){
+    if(event === "Recipes"){
+      this.recipes = true;
+      this.shoppingList = false; 
+      console.log("recipes");
+    }else{
+      this.shoppingList = true;
+      this.recipes = false;
+      console.log("shopping");
+    }
+  } 
 }
